@@ -1,0 +1,8 @@
+Name:      Xiaoran Lin
+SJSU ID:   011824657 
+Phone:     669-252-9918
+Email:     linxiaoran0210@gmail.com
+Class:     CMPE 272
+LAB Name:  Create your first Web Application
+LAB Num:   #3
+Address:   375 S.9th Street, San Jose, CA 95112

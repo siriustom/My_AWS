@@ -1,0 +1,594 @@
+Last login: Thu Mar  9 00:41:10 on ttys001
+Xiaorans-MacBook-Pro:~ Tom$ cd /Users/Tom/Documents/Lin_storage/Study/Software_engineering/CMPE_272-02/My_AWS
+Xiaorans-MacBook-Pro:My_AWS Tom$ ls
+LAMP_software_bundle.svg	lxrpass.pem
+credentials.csv			lxrpass_north_cal.pem
+Xiaorans-MacBook-Pro:My_AWS Tom$ chmod 400 lxrpass_north_cal.pem
+Xiaorans-MacBook-Pro:My_AWS Tom$ ssh -i "lxrpass_north_cal.pem" ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+ssh: connect to host ec2-54-215-249-14.us-west-1.compute.amazonaws.com port 22: Operation timed out
+Xiaorans-MacBook-Pro:My_AWS Tom$ sudo ssh -i "lxrpass_north_cal.pem" ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+Password:
+ssh: connect to host ec2-54-215-249-14.us-west-1.compute.amazonaws.com port 22: Operation timed out
+Xiaorans-MacBook-Pro:My_AWS Tom$ ls
+LAMP_software_bundle.svg	lxrpass.pem
+credentials.csv			lxrpass_north_cal.pem
+Xiaorans-MacBook-Pro:My_AWS Tom$ sudo ssh -i "lxrpass_north_cal.pem" ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+ssh: connect to host ec2-54-215-249-14.us-west-1.compute.amazonaws.com port 22: Operation timed out
+Xiaorans-MacBook-Pro:My_AWS Tom$ sudo ssh -i "lxrpass_north_cal.pem" ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+Password:
+The authenticity of host 'ec2-54-215-249-14.us-west-1.compute.amazonaws.com (54.215.249.14)' can't be established.
+ECDSA key fingerprint is SHA256:dNVs+BiaxEWBF5VA3hYVt2QGCK+Jmt8DlbGqhxFvUD4.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-54-215-249-14.us-west-1.compute.amazonaws.com,54.215.249.14' (ECDSA) to the list of known hosts.
+packet_write_wait: Connection to 54.215.249.14 port 22: Broken pipe
+Xiaorans-MacBook-Pro:My_AWS Tom$ sudo yum update -y
+sudo: yum: command not found
+Xiaorans-MacBook-Pro:My_AWS Tom$ -y
+-bash: -y: command not found
+Xiaorans-MacBook-Pro:My_AWS Tom$  ssh -i "lxrpass_north_cal.pem" ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+The authenticity of host 'ec2-54-215-249-14.us-west-1.compute.amazonaws.com (54.215.249.14)' can't be established.
+ECDSA key fingerprint is SHA256:dNVs+BiaxEWBF5VA3hYVt2QGCK+Jmt8DlbGqhxFvUD4.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-54-215-249-14.us-west-1.compute.amazonaws.com,54.215.249.14' (ECDSA) to the list of known hosts.
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2016.09-release-notes/
+6 package(s) needed for security, out of 8 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-15-153 ~]$ sudo yum update
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main/latest                                         | 2.1 kB     00:00     
+amzn-updates/latest                                      | 2.3 kB     00:00     
+Resolving Dependencies
+--> Running transaction check
+---> Package glibc.x86_64 0:2.17-106.168.amzn1 will be updated
+---> Package glibc.x86_64 0:2.17-157.169.amzn1 will be an update
+---> Package glibc-common.x86_64 0:2.17-106.168.amzn1 will be updated
+---> Package glibc-common.x86_64 0:2.17-157.169.amzn1 will be an update
+---> Package kernel.x86_64 0:4.4.51-40.58.amzn1 will be installed
+---> Package krb5-libs.x86_64 0:1.13.2-12.40.amzn1 will be updated
+---> Package krb5-libs.x86_64 0:1.14.1-27.41.amzn1 will be an update
+---> Package libxcb.x86_64 0:1.8.1-1.18.amzn1 will be updated
+---> Package libxcb.x86_64 0:1.11-2.21.amzn1 will be an update
+---> Package openldap.x86_64 0:2.4.40-12.29.amzn1 will be updated
+---> Package openldap.x86_64 0:2.4.40-12.30.amzn1 will be an update
+---> Package openssl.x86_64 1:1.0.1k-15.96.amzn1 will be updated
+---> Package openssl.x86_64 1:1.0.1k-15.99.amzn1 will be an update
+---> Package system-release.noarch 0:2016.09-0.8 will be updated
+---> Package system-release.noarch 0:2016.09-0.9 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package            Arch       Version                   Repository        Size
+================================================================================
+Installing:
+ kernel             x86_64     4.4.51-40.58.amzn1        amzn-updates      17 M
+Updating:
+ glibc              x86_64     2.17-157.169.amzn1        amzn-updates     5.7 M
+ glibc-common       x86_64     2.17-157.169.amzn1        amzn-updates      28 M
+ krb5-libs          x86_64     1.14.1-27.41.amzn1        amzn-updates     856 k
+ libxcb             x86_64     1.11-2.21.amzn1           amzn-updates     186 k
+ openldap           x86_64     2.4.40-12.30.amzn1        amzn-updates     415 k
+ openssl            x86_64     1:1.0.1k-15.99.amzn1      amzn-updates     1.6 M
+ system-release     noarch     2016.09-0.9               amzn-updates      24 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+Upgrade  7 Packages
+
+Total download size: 53 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/8): glibc-2.17-157.169.amzn1.x86_64.rpm               | 5.7 MB     00:00     
+(2/8): glibc-common-2.17-157.169.amzn1.x86_64.rpm        |  28 MB     00:01     
+(3/8): kernel-4.4.51-40.58.amzn1.x86_64.rpm              |  17 MB     00:00     
+(4/8): krb5-libs-1.14.1-27.41.amzn1.x86_64.rpm           | 856 kB     00:00     
+(5/8): libxcb-1.11-2.21.amzn1.x86_64.rpm                 | 186 kB     00:00     
+(6/8): openldap-2.4.40-12.30.amzn1.x86_64.rpm            | 415 kB     00:00     
+(7/8): openssl-1.0.1k-15.99.amzn1.x86_64.rpm             | 1.6 MB     00:00     
+(8/8): system-release-2016.09-0.9.noarch.rpm             |  24 kB     00:00     
+--------------------------------------------------------------------------------
+Total                                               22 MB/s |  53 MB  00:02     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : glibc-2.17-157.169.amzn1.x86_64                             1/15 
+warning: /etc/nsswitch.conf created as /etc/nsswitch.conf.rpmnew
+  Updating   : glibc-common-2.17-157.169.amzn1.x86_64                      2/15 
+  Updating   : krb5-libs-1.14.1-27.41.amzn1.x86_64                         3/15 
+  Updating   : 1:openssl-1.0.1k-15.99.amzn1.x86_64                         4/15 
+  Updating   : libxcb-1.11-2.21.amzn1.x86_64                               5/15 
+  Updating   : openldap-2.4.40-12.30.amzn1.x86_64                          6/15 
+  Updating   : system-release-2016.09-0.9.noarch                           7/15 
+  Installing : kernel-4.4.51-40.58.amzn1.x86_64                            8/15 
+  Cleanup    : 1:openssl-1.0.1k-15.96.amzn1.x86_64                         9/15 
+  Cleanup    : krb5-libs-1.13.2-12.40.amzn1.x86_64                        10/15 
+  Cleanup    : openldap-2.4.40-12.29.amzn1.x86_64                         11/15 
+  Cleanup    : libxcb-1.8.1-1.18.amzn1.x86_64                             12/15 
+  Cleanup    : system-release-2016.09-0.8.noarch                          13/15 
+  Cleanup    : glibc-2.17-106.168.amzn1.x86_64                            14/15 
+  Cleanup    : glibc-common-2.17-106.168.amzn1.x86_64                     15/15 
+  Verifying  : kernel-4.4.51-40.58.amzn1.x86_64                            1/15 
+  Verifying  : glibc-common-2.17-157.169.amzn1.x86_64                      2/15 
+  Verifying  : glibc-2.17-157.169.amzn1.x86_64                             3/15 
+  Verifying  : libxcb-1.11-2.21.amzn1.x86_64                               4/15 
+  Verifying  : openldap-2.4.40-12.30.amzn1.x86_64                          5/15 
+  Verifying  : system-release-2016.09-0.9.noarch                           6/15 
+  Verifying  : krb5-libs-1.14.1-27.41.amzn1.x86_64                         7/15 
+  Verifying  : 1:openssl-1.0.1k-15.99.amzn1.x86_64                         8/15 
+  Verifying  : krb5-libs-1.13.2-12.40.amzn1.x86_64                         9/15 
+  Verifying  : 1:openssl-1.0.1k-15.96.amzn1.x86_64                        10/15 
+  Verifying  : system-release-2016.09-0.8.noarch                          11/15 
+  Verifying  : openldap-2.4.40-12.29.amzn1.x86_64                         12/15 
+  Verifying  : libxcb-1.8.1-1.18.amzn1.x86_64                             13/15 
+  Verifying  : glibc-common-2.17-106.168.amzn1.x86_64                     14/15 
+  Verifying  : glibc-2.17-106.168.amzn1.x86_64                            15/15 
+
+Installed:
+  kernel.x86_64 0:4.4.51-40.58.amzn1                                            
+
+Updated:
+  glibc.x86_64 0:2.17-157.169.amzn1                                             
+  glibc-common.x86_64 0:2.17-157.169.amzn1                                      
+  krb5-libs.x86_64 0:1.14.1-27.41.amzn1                                         
+  libxcb.x86_64 0:1.11-2.21.amzn1                                               
+  openldap.x86_64 0:2.4.40-12.30.amzn1                                          
+  openssl.x86_64 1:1.0.1k-15.99.amzn1                                           
+  system-release.noarch 0:2016.09-0.9                                           
+
+Complete!
+[ec2-user@ip-172-31-15-153 ~]$ sudo yum install -y httpd24 php70 mysql56-server php70-mysqlnd
+Loaded plugins: priorities, update-motd, upgrade-helper
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd24.x86_64 0:2.4.25-1.68.amzn1 will be installed
+--> Processing Dependency: httpd24-tools = 2.4.25-1.68.amzn1 for package: httpd24-2.4.25-1.68.amzn1.x86_64
+--> Processing Dependency: libaprutil-1.so.0()(64bit) for package: httpd24-2.4.25-1.68.amzn1.x86_64
+--> Processing Dependency: libapr-1.so.0()(64bit) for package: httpd24-2.4.25-1.68.amzn1.x86_64
+---> Package mysql56-server.x86_64 0:5.6.35-1.23.amzn1 will be installed
+--> Processing Dependency: mysql56-common(x86-64) = 5.6.35-1.23.amzn1 for package: mysql56-server-5.6.35-1.23.amzn1.x86_64
+--> Processing Dependency: mysql56-errmsg(x86-64) = 5.6.35-1.23.amzn1 for package: mysql56-server-5.6.35-1.23.amzn1.x86_64
+--> Processing Dependency: perl(Data::Dumper) for package: mysql56-server-5.6.35-1.23.amzn1.x86_64
+--> Processing Dependency: mysql56(x86-64) for package: mysql56-server-5.6.35-1.23.amzn1.x86_64
+--> Processing Dependency: perl-DBD-MySQL(mysql56) for package: mysql56-server-5.6.35-1.23.amzn1.x86_64
+--> Processing Dependency: perl(DBI) for package: mysql56-server-5.6.35-1.23.amzn1.x86_64
+--> Processing Dependency: mysql-config for package: mysql56-server-5.6.35-1.23.amzn1.x86_64
+--> Processing Dependency: mysql56(alternatives) for package: mysql56-server-5.6.35-1.23.amzn1.x86_64
+---> Package php70.x86_64 0:7.0.14-1.20.amzn1 will be installed
+--> Processing Dependency: php70-cli(x86-64) = 7.0.14-1.20.amzn1 for package: php70-7.0.14-1.20.amzn1.x86_64
+--> Processing Dependency: php70-common(x86-64) = 7.0.14-1.20.amzn1 for package: php70-7.0.14-1.20.amzn1.x86_64
+--> Processing Dependency: php70-common for package: php70-7.0.14-1.20.amzn1.x86_64
+---> Package php70-mysqlnd.x86_64 0:7.0.14-1.20.amzn1 will be installed
+--> Processing Dependency: php70-pdo(x86-64) = 7.0.14-1.20.amzn1 for package: php70-mysqlnd-7.0.14-1.20.amzn1.x86_64
+--> Running transaction check
+---> Package apr.x86_64 0:1.5.1-1.12.amzn1 will be installed
+---> Package apr-util.x86_64 0:1.4.1-4.17.amzn1 will be installed
+---> Package httpd24-tools.x86_64 0:2.4.25-1.68.amzn1 will be installed
+---> Package mysql-config.x86_64 0:5.5.54-1.16.amzn1 will be installed
+---> Package mysql56.x86_64 0:5.6.35-1.23.amzn1 will be installed
+---> Package mysql56-common.x86_64 0:5.6.35-1.23.amzn1 will be installed
+---> Package mysql56-errmsg.x86_64 0:5.6.35-1.23.amzn1 will be installed
+---> Package perl-DBD-MySQL56.x86_64 0:4.023-5.21.amzn1 will be installed
+--> Processing Dependency: libmysqlclient.so.1018(libmysqlclient_18)(64bit) for package: perl-DBD-MySQL56-4.023-5.21.amzn1.x86_64
+--> Processing Dependency: libmysqlclient.so.1018()(64bit) for package: perl-DBD-MySQL56-4.023-5.21.amzn1.x86_64
+---> Package perl-DBI.x86_64 0:1.627-4.8.amzn1 will be installed
+--> Processing Dependency: perl(RPC::PlClient) >= 0.2000 for package: perl-DBI-1.627-4.8.amzn1.x86_64
+--> Processing Dependency: perl(RPC::PlServer) >= 0.2001 for package: perl-DBI-1.627-4.8.amzn1.x86_64
+---> Package perl-Data-Dumper.x86_64 0:2.145-3.5.amzn1 will be installed
+---> Package php70-cli.x86_64 0:7.0.14-1.20.amzn1 will be installed
+---> Package php70-common.x86_64 0:7.0.14-1.20.amzn1 will be installed
+--> Processing Dependency: php70-xml(x86-64) = 7.0.14-1.20.amzn1 for package: php70-common-7.0.14-1.20.amzn1.x86_64
+--> Processing Dependency: php70-process(x86-64) = 7.0.14-1.20.amzn1 for package: php70-common-7.0.14-1.20.amzn1.x86_64
+--> Processing Dependency: php70-json(x86-64) for package: php70-common-7.0.14-1.20.amzn1.x86_64
+---> Package php70-pdo.x86_64 0:7.0.14-1.20.amzn1 will be installed
+--> Running transaction check
+---> Package mysql56-libs.x86_64 0:5.6.35-1.23.amzn1 will be installed
+---> Package perl-PlRPC.noarch 0:0.2020-14.7.amzn1 will be installed
+--> Processing Dependency: perl(Net::Daemon) >= 0.13 for package: perl-PlRPC-0.2020-14.7.amzn1.noarch
+--> Processing Dependency: perl(Compress::Zlib) for package: perl-PlRPC-0.2020-14.7.amzn1.noarch
+--> Processing Dependency: perl(Net::Daemon::Test) for package: perl-PlRPC-0.2020-14.7.amzn1.noarch
+--> Processing Dependency: perl(Net::Daemon::Log) for package: perl-PlRPC-0.2020-14.7.amzn1.noarch
+---> Package php70-json.x86_64 0:7.0.14-1.20.amzn1 will be installed
+---> Package php70-process.x86_64 0:7.0.14-1.20.amzn1 will be installed
+---> Package php70-xml.x86_64 0:7.0.14-1.20.amzn1 will be installed
+--> Running transaction check
+---> Package perl-IO-Compress.noarch 0:2.061-2.12.amzn1 will be installed
+--> Processing Dependency: perl(Compress::Raw::Zlib) >= 2.061 for package: perl-IO-Compress-2.061-2.12.amzn1.noarch
+--> Processing Dependency: perl(Compress::Raw::Bzip2) >= 2.061 for package: perl-IO-Compress-2.061-2.12.amzn1.noarch
+---> Package perl-Net-Daemon.noarch 0:0.48-5.5.amzn1 will be installed
+--> Running transaction check
+---> Package perl-Compress-Raw-Bzip2.x86_64 0:2.061-3.11.amzn1 will be installed
+---> Package perl-Compress-Raw-Zlib.x86_64 1:2.061-4.1.amzn1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                   Arch     Version                Repository      Size
+================================================================================
+Installing:
+ httpd24                   x86_64   2.4.25-1.68.amzn1      amzn-updates   1.4 M
+ mysql56-server            x86_64   5.6.35-1.23.amzn1      amzn-updates    16 M
+ php70                     x86_64   7.0.14-1.20.amzn1      amzn-updates   3.3 M
+ php70-mysqlnd             x86_64   7.0.14-1.20.amzn1      amzn-updates   330 k
+Installing for dependencies:
+ apr                       x86_64   1.5.1-1.12.amzn1       amzn-main      116 k
+ apr-util                  x86_64   1.4.1-4.17.amzn1       amzn-main       87 k
+ httpd24-tools             x86_64   2.4.25-1.68.amzn1      amzn-updates    94 k
+ mysql-config              x86_64   5.5.54-1.16.amzn1      amzn-updates    49 k
+ mysql56                   x86_64   5.6.35-1.23.amzn1      amzn-updates    10 M
+ mysql56-common            x86_64   5.6.35-1.23.amzn1      amzn-updates    90 k
+ mysql56-errmsg            x86_64   5.6.35-1.23.amzn1      amzn-updates   682 k
+ mysql56-libs              x86_64   5.6.35-1.23.amzn1      amzn-updates   950 k
+ perl-Compress-Raw-Bzip2   x86_64   2.061-3.11.amzn1       amzn-main       33 k
+ perl-Compress-Raw-Zlib    x86_64   1:2.061-4.1.amzn1      amzn-main       61 k
+ perl-DBD-MySQL56          x86_64   4.023-5.21.amzn1       amzn-main      148 k
+ perl-DBI                  x86_64   1.627-4.8.amzn1        amzn-main      855 k
+ perl-Data-Dumper          x86_64   2.145-3.5.amzn1        amzn-main       49 k
+ perl-IO-Compress          noarch   2.061-2.12.amzn1       amzn-main      298 k
+ perl-Net-Daemon           noarch   0.48-5.5.amzn1         amzn-main       58 k
+ perl-PlRPC                noarch   0.2020-14.7.amzn1      amzn-main       39 k
+ php70-cli                 x86_64   7.0.14-1.20.amzn1      amzn-updates   4.7 M
+ php70-common              x86_64   7.0.14-1.20.amzn1      amzn-updates   1.2 M
+ php70-json                x86_64   7.0.14-1.20.amzn1      amzn-updates    65 k
+ php70-pdo                 x86_64   7.0.14-1.20.amzn1      amzn-updates   170 k
+ php70-process             x86_64   7.0.14-1.20.amzn1      amzn-updates    79 k
+ php70-xml                 x86_64   7.0.14-1.20.amzn1      amzn-updates   310 k
+
+Transaction Summary
+================================================================================
+Install  4 Packages (+22 Dependent packages)
+
+Total download size: 41 M
+Installed size: 138 M
+Downloading packages:
+(1/26): apr-1.5.1-1.12.amzn1.x86_64.rpm                  | 116 kB     00:00     
+(2/26): apr-util-1.4.1-4.17.amzn1.x86_64.rpm             |  87 kB     00:00     
+(3/26): httpd24-2.4.25-1.68.amzn1.x86_64.rpm             | 1.4 MB     00:00     
+(4/26): httpd24-tools-2.4.25-1.68.amzn1.x86_64.rpm       |  94 kB     00:00     
+(5/26): mysql-config-5.5.54-1.16.amzn1.x86_64.rpm        |  49 kB     00:00     
+(6/26): mysql56-5.6.35-1.23.amzn1.x86_64.rpm             |  10 MB     00:00     
+(7/26): mysql56-common-5.6.35-1.23.amzn1.x86_64.rpm      |  90 kB     00:00     
+(8/26): mysql56-errmsg-5.6.35-1.23.amzn1.x86_64.rpm      | 682 kB     00:00     
+(9/26): mysql56-libs-5.6.35-1.23.amzn1.x86_64.rpm        | 950 kB     00:00     
+(10/26): mysql56-server-5.6.35-1.23.amzn1.x86_64.rpm     |  16 MB     00:00     
+(11/26): perl-Compress-Raw-Bzip2-2.061-3.11.amzn1.x86_64 |  33 kB     00:00     
+(12/26): perl-Compress-Raw-Zlib-2.061-4.1.amzn1.x86_64.r |  61 kB     00:00     
+(13/26): perl-DBD-MySQL56-4.023-5.21.amzn1.x86_64.rpm    | 148 kB     00:00     
+(14/26): perl-DBI-1.627-4.8.amzn1.x86_64.rpm             | 855 kB     00:00     
+(15/26): perl-Data-Dumper-2.145-3.5.amzn1.x86_64.rpm     |  49 kB     00:00     
+(16/26): perl-IO-Compress-2.061-2.12.amzn1.noarch.rpm    | 298 kB     00:00     
+(17/26): perl-Net-Daemon-0.48-5.5.amzn1.noarch.rpm       |  58 kB     00:00     
+(18/26): perl-PlRPC-0.2020-14.7.amzn1.noarch.rpm         |  39 kB     00:00     
+(19/26): php70-7.0.14-1.20.amzn1.x86_64.rpm              | 3.3 MB     00:00     
+(20/26): php70-cli-7.0.14-1.20.amzn1.x86_64.rpm          | 4.7 MB     00:00     
+(21/26): php70-common-7.0.14-1.20.amzn1.x86_64.rpm       | 1.2 MB     00:00     
+(22/26): php70-json-7.0.14-1.20.amzn1.x86_64.rpm         |  65 kB     00:00     
+(23/26): php70-mysqlnd-7.0.14-1.20.amzn1.x86_64.rpm      | 330 kB     00:00     
+(24/26): php70-pdo-7.0.14-1.20.amzn1.x86_64.rpm          | 170 kB     00:00     
+(25/26): php70-process-7.0.14-1.20.amzn1.x86_64.rpm      |  79 kB     00:00     
+(26/26): php70-xml-7.0.14-1.20.amzn1.x86_64.rpm          | 310 kB     00:00     
+--------------------------------------------------------------------------------
+Total                                               14 MB/s |  41 MB  00:02     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : php70-process-7.0.14-1.20.amzn1.x86_64                      1/26 
+  Installing : php70-xml-7.0.14-1.20.amzn1.x86_64                          2/26 
+  Installing : php70-json-7.0.14-1.20.amzn1.x86_64                         3/26 
+  Installing : php70-cli-7.0.14-1.20.amzn1.x86_64                          4/26 
+  Installing : php70-common-7.0.14-1.20.amzn1.x86_64                       5/26 
+  Installing : apr-1.5.1-1.12.amzn1.x86_64                                 6/26 
+  Installing : apr-util-1.4.1-4.17.amzn1.x86_64                            7/26 
+  Installing : mysql-config-5.5.54-1.16.amzn1.x86_64                       8/26 
+  Installing : mysql56-common-5.6.35-1.23.amzn1.x86_64                     9/26 
+  Installing : perl-Data-Dumper-2.145-3.5.amzn1.x86_64                    10/26 
+  Installing : mysql56-errmsg-5.6.35-1.23.amzn1.x86_64                    11/26 
+  Installing : mysql56-5.6.35-1.23.amzn1.x86_64                           12/26 
+  Installing : mysql56-libs-5.6.35-1.23.amzn1.x86_64                      13/26 
+  Installing : httpd24-tools-2.4.25-1.68.amzn1.x86_64                     14/26 
+  Installing : httpd24-2.4.25-1.68.amzn1.x86_64                           15/26 
+  Installing : php70-pdo-7.0.14-1.20.amzn1.x86_64                         16/26 
+  Installing : perl-Compress-Raw-Bzip2-2.061-3.11.amzn1.x86_64            17/26 
+  Installing : perl-Net-Daemon-0.48-5.5.amzn1.noarch                      18/26 
+  Installing : 1:perl-Compress-Raw-Zlib-2.061-4.1.amzn1.x86_64            19/26 
+  Installing : perl-IO-Compress-2.061-2.12.amzn1.noarch                   20/26 
+  Installing : perl-PlRPC-0.2020-14.7.amzn1.noarch                        21/26 
+  Installing : perl-DBI-1.627-4.8.amzn1.x86_64                            22/26 
+  Installing : perl-DBD-MySQL56-4.023-5.21.amzn1.x86_64                   23/26 
+  Installing : mysql56-server-5.6.35-1.23.amzn1.x86_64                    24/26 
+  Installing : php70-mysqlnd-7.0.14-1.20.amzn1.x86_64                     25/26 
+  Installing : php70-7.0.14-1.20.amzn1.x86_64                             26/26 
+  Verifying  : php70-mysqlnd-7.0.14-1.20.amzn1.x86_64                      1/26 
+  Verifying  : php70-common-7.0.14-1.20.amzn1.x86_64                       2/26 
+  Verifying  : 1:perl-Compress-Raw-Zlib-2.061-4.1.amzn1.x86_64             3/26 
+  Verifying  : apr-util-1.4.1-4.17.amzn1.x86_64                            4/26 
+  Verifying  : perl-PlRPC-0.2020-14.7.amzn1.noarch                         5/26 
+  Verifying  : apr-1.5.1-1.12.amzn1.x86_64                                 6/26 
+  Verifying  : php70-process-7.0.14-1.20.amzn1.x86_64                      7/26 
+  Verifying  : perl-IO-Compress-2.061-2.12.amzn1.noarch                    8/26 
+  Verifying  : php70-xml-7.0.14-1.20.amzn1.x86_64                          9/26 
+  Verifying  : mysql56-server-5.6.35-1.23.amzn1.x86_64                    10/26 
+  Verifying  : mysql56-errmsg-5.6.35-1.23.amzn1.x86_64                    11/26 
+  Verifying  : mysql56-common-5.6.35-1.23.amzn1.x86_64                    12/26 
+  Verifying  : perl-Net-Daemon-0.48-5.5.amzn1.noarch                      13/26 
+  Verifying  : perl-Compress-Raw-Bzip2-2.061-3.11.amzn1.x86_64            14/26 
+  Verifying  : mysql56-5.6.35-1.23.amzn1.x86_64                           15/26 
+  Verifying  : php70-json-7.0.14-1.20.amzn1.x86_64                        16/26 
+  Verifying  : perl-Data-Dumper-2.145-3.5.amzn1.x86_64                    17/26 
+  Verifying  : perl-DBI-1.627-4.8.amzn1.x86_64                            18/26 
+  Verifying  : php70-pdo-7.0.14-1.20.amzn1.x86_64                         19/26 
+  Verifying  : httpd24-2.4.25-1.68.amzn1.x86_64                           20/26 
+  Verifying  : php70-7.0.14-1.20.amzn1.x86_64                             21/26 
+  Verifying  : mysql-config-5.5.54-1.16.amzn1.x86_64                      22/26 
+  Verifying  : mysql56-libs-5.6.35-1.23.amzn1.x86_64                      23/26 
+  Verifying  : perl-DBD-MySQL56-4.023-5.21.amzn1.x86_64                   24/26 
+  Verifying  : php70-cli-7.0.14-1.20.amzn1.x86_64                         25/26 
+  Verifying  : httpd24-tools-2.4.25-1.68.amzn1.x86_64                     26/26 
+
+Installed:
+  httpd24.x86_64 0:2.4.25-1.68.amzn1  mysql56-server.x86_64 0:5.6.35-1.23.amzn1 
+  php70.x86_64 0:7.0.14-1.20.amzn1    php70-mysqlnd.x86_64 0:7.0.14-1.20.amzn1  
+
+Dependency Installed:
+  apr.x86_64 0:1.5.1-1.12.amzn1                                                 
+  apr-util.x86_64 0:1.4.1-4.17.amzn1                                            
+  httpd24-tools.x86_64 0:2.4.25-1.68.amzn1                                      
+  mysql-config.x86_64 0:5.5.54-1.16.amzn1                                       
+  mysql56.x86_64 0:5.6.35-1.23.amzn1                                            
+  mysql56-common.x86_64 0:5.6.35-1.23.amzn1                                     
+  mysql56-errmsg.x86_64 0:5.6.35-1.23.amzn1                                     
+  mysql56-libs.x86_64 0:5.6.35-1.23.amzn1                                       
+  perl-Compress-Raw-Bzip2.x86_64 0:2.061-3.11.amzn1                             
+  perl-Compress-Raw-Zlib.x86_64 1:2.061-4.1.amzn1                               
+  perl-DBD-MySQL56.x86_64 0:4.023-5.21.amzn1                                    
+  perl-DBI.x86_64 0:1.627-4.8.amzn1                                             
+  perl-Data-Dumper.x86_64 0:2.145-3.5.amzn1                                     
+  perl-IO-Compress.noarch 0:2.061-2.12.amzn1                                    
+  perl-Net-Daemon.noarch 0:0.48-5.5.amzn1                                       
+  perl-PlRPC.noarch 0:0.2020-14.7.amzn1                                         
+  php70-cli.x86_64 0:7.0.14-1.20.amzn1                                          
+  php70-common.x86_64 0:7.0.14-1.20.amzn1                                       
+  php70-json.x86_64 0:7.0.14-1.20.amzn1                                         
+  php70-pdo.x86_64 0:7.0.14-1.20.amzn1                                          
+  php70-process.x86_64 0:7.0.14-1.20.amzn1                                      
+  php70-xml.x86_64 0:7.0.14-1.20.amzn1                                          
+
+Complete!
+[ec2-user@ip-172-31-15-153 ~]$ sudo service httpd start
+Starting httpd:                                            [  OK  ]
+[ec2-user@ip-172-31-15-153 ~]$ sudo chkconfig httpd on
+[ec2-user@ip-172-31-15-153 ~]$ chkconfig --list httpd
+httpd          	0:off	1:off	2:on	3:on	4:on	5:on	6:off
+[ec2-user@ip-172-31-15-153 ~]$ ls -l /var/www
+total 20
+drwxr-xr-x 2 root root 4096 Jan 19 16:56 cgi-bin
+drwxr-xr-x 3 root root 4096 Mar 11 05:24 error
+drwxr-xr-x 2 root root 4096 Jan 19 16:56 html
+drwxr-xr-x 3 root root 4096 Mar 11 05:24 icons
+drwxr-xr-x 2 root root 4096 Mar 11 05:24 noindex
+[ec2-user@ip-172-31-15-153 ~]$ sudo groupadd www
+[ec2-user@ip-172-31-15-153 ~]$ sudo usermod -a -G www ec2-user
+[ec2-user@ip-172-31-15-153 ~]$ exit
+logout
+Connection to ec2-54-215-249-14.us-west-1.compute.amazonaws.com closed.
+Xiaorans-MacBook-Pro:My_AWS Tom$ groups
+staff com.apple.sharepoint.group.1 everyone localaccounts _appserverusr admin _appserveradm _lpadmin _appstore _lpoperator _developer com.apple.access_ftp com.apple.access_screensharing com.apple.access_ssh
+Xiaorans-MacBook-Pro:My_AWS Tom$  ssh -i "lxrpass_north_cal.pem" ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+Last login: Sat Mar 11 05:17:55 2017 from 130.65.254.9
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2016.09-release-notes/
+[ec2-user@ip-172-31-15-153 ~]$ exit
+logout
+Connection to ec2-54-215-249-14.us-west-1.compute.amazonaws.com closed.
+Xiaorans-MacBook-Pro:My_AWS Tom$ ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+-bash: ec2-54-215-249-14.us-west-1.compute.amazonaws.com: command not found
+Xiaorans-MacBook-Pro:My_AWS Tom$  ssh -i "lxrpass_north_cal.pem" ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+Last login: Sat Mar 11 05:38:52 2017 from 130.65.254.9
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2016.09-release-notes/
+[ec2-user@ip-172-31-15-153 ~]$ groups
+ec2-user wheel www
+[ec2-user@ip-172-31-15-153 ~]$ sudo chown -R root:www /var/www
+[ec2-user@ip-172-31-15-153 ~]$ sudo chmod 2775 /var/www
+[ec2-user@ip-172-31-15-153 ~]$ find /var/www -type d -exec sudo chmod 2775 {} \;
+[ec2-user@ip-172-31-15-153 ~]$ find /var/www -type f -exec sudo chmod 0664 {} \;
+[ec2-user@ip-172-31-15-153 ~]$ echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+[ec2-user@ip-172-31-15-153 ~]$ rm /var/www/html/phpinfo.php
+[ec2-user@ip-172-31-15-153 ~]$ sudo service mysqld start
+Initializing MySQL database
+2017-03-11 05:48:37 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2017-03-11 05:48:37 0 [Note] Ignoring --secure-file-priv value as server is running with --bootstrap.
+2017-03-11 05:48:37 0 [Note] /usr/libexec/mysql56/mysqld (mysqld 5.6.35) starting as process 1130 ...
+2017-03-11 05:48:37 1130 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2017-03-11 05:48:37 1130 [Note] InnoDB: The InnoDB memory heap is disabled
+2017-03-11 05:48:37 1130 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2017-03-11 05:48:37 1130 [Note] InnoDB: Memory barrier is not used
+2017-03-11 05:48:37 1130 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2017-03-11 05:48:37 1130 [Note] InnoDB: Using Linux native AIO
+2017-03-11 05:48:37 1130 [Note] InnoDB: Using CPU crc32 instructions
+2017-03-11 05:48:37 1130 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2017-03-11 05:48:37 1130 [Note] InnoDB: Completed initialization of buffer pool
+2017-03-11 05:48:37 1130 [Note] InnoDB: The first specified data file ./ibdata1 did not exist: a new database to be created!
+2017-03-11 05:48:37 1130 [Note] InnoDB: Setting file ./ibdata1 size to 12 MB
+2017-03-11 05:48:37 1130 [Note] InnoDB: Database physically writes the file full: wait...
+2017-03-11 05:48:37 1130 [Note] InnoDB: Setting log file ./ib_logfile101 size to 48 MB
+2017-03-11 05:48:37 1130 [Note] InnoDB: Setting log file ./ib_logfile1 size to 48 MB
+2017-03-11 05:48:38 1130 [Note] InnoDB: Renaming log file ./ib_logfile101 to ./ib_logfile0
+2017-03-11 05:48:38 1130 [Warning] InnoDB: New log files created, LSN=45781
+2017-03-11 05:48:38 1130 [Note] InnoDB: Doublewrite buffer not found: creating new
+2017-03-11 05:48:38 1130 [Note] InnoDB: Doublewrite buffer created
+2017-03-11 05:48:38 1130 [Note] InnoDB: 128 rollback segment(s) are active.
+2017-03-11 05:48:38 1130 [Warning] InnoDB: Creating foreign key constraint system tables.
+2017-03-11 05:48:38 1130 [Note] InnoDB: Foreign key constraint system tables created
+2017-03-11 05:48:38 1130 [Note] InnoDB: Creating tablespace and datafile system tables.
+2017-03-11 05:48:38 1130 [Note] InnoDB: Tablespace and datafile system tables created.
+2017-03-11 05:48:38 1130 [Note] InnoDB: Waiting for purge to start
+2017-03-11 05:48:38 1130 [Note] InnoDB: 5.6.35 started; log sequence number 0
+2017-03-11 05:48:38 1130 [Note] RSA private key file not found: /var/lib/mysql//private_key.pem. Some authentication plugins will not work.
+2017-03-11 05:48:38 1130 [Note] RSA public key file not found: /var/lib/mysql//public_key.pem. Some authentication plugins will not work.
+2017-03-11 05:48:38 1130 [Note] Binlog end
+2017-03-11 05:48:38 1130 [Note] InnoDB: FTS optimize thread exiting.
+2017-03-11 05:48:38 1130 [Note] InnoDB: Starting shutdown...
+2017-03-11 05:48:40 1130 [Note] InnoDB: Shutdown completed; log sequence number 1625977
+
+
+2017-03-11 05:48:40 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2017-03-11 05:48:40 0 [Note] Ignoring --secure-file-priv value as server is running with --bootstrap.
+2017-03-11 05:48:40 0 [Note] /usr/libexec/mysql56/mysqld (mysqld 5.6.35) starting as process 1152 ...
+2017-03-11 05:48:40 1152 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2017-03-11 05:48:40 1152 [Note] InnoDB: The InnoDB memory heap is disabled
+2017-03-11 05:48:40 1152 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2017-03-11 05:48:40 1152 [Note] InnoDB: Memory barrier is not used
+2017-03-11 05:48:40 1152 [Note] InnoDB: Compressed tables use zlib 1.2.8
+2017-03-11 05:48:40 1152 [Note] InnoDB: Using Linux native AIO
+2017-03-11 05:48:40 1152 [Note] InnoDB: Using CPU crc32 instructions
+2017-03-11 05:48:40 1152 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2017-03-11 05:48:40 1152 [Note] InnoDB: Completed initialization of buffer pool
+2017-03-11 05:48:40 1152 [Note] InnoDB: Highest supported file format is Barracuda.
+2017-03-11 05:48:40 1152 [Note] InnoDB: 128 rollback segment(s) are active.
+2017-03-11 05:48:40 1152 [Note] InnoDB: Waiting for purge to start
+2017-03-11 05:48:40 1152 [Note] InnoDB: 5.6.35 started; log sequence number 1625977
+2017-03-11 05:48:40 1152 [Note] RSA private key file not found: /var/lib/mysql//private_key.pem. Some authentication plugins will not work.
+2017-03-11 05:48:40 1152 [Note] RSA public key file not found: /var/lib/mysql//public_key.pem. Some authentication plugins will not work.
+2017-03-11 05:48:40 1152 [Note] Binlog end
+2017-03-11 05:48:40 1152 [Note] InnoDB: FTS optimize thread exiting.
+2017-03-11 05:48:40 1152 [Note] InnoDB: Starting shutdown...
+2017-03-11 05:48:41 1152 [Note] InnoDB: Shutdown completed; log sequence number 1625987
+
+
+
+
+PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
+To do so, start the server, then issue the following commands:
+
+  /usr/libexec/mysql56/mysqladmin -u root password 'new-password'
+  /usr/libexec/mysql56/mysqladmin -u root -h ip-172-31-15-153 password 'new-password'
+
+Alternatively you can run:
+
+  /usr/libexec/mysql56/mysql_secure_installation
+
+which will also give you the option of removing the test
+databases and anonymous user created by default.  This is
+strongly recommended for production servers.
+
+See the manual for more instructions.
+
+Please report any problems at http://bugs.mysql.com/
+
+The latest information about MySQL is available on the web at
+
+  http://www.mysql.com
+
+Support MySQL by buying support/licenses at http://shop.mysql.com
+
+Note: new default config file not created.
+Please make sure your config file is current
+
+WARNING: Default config file /etc/my.cnf exists on the system
+This file will be read by default by the MySQL server
+If you do not want to use this, either remove it, or use the
+--defaults-file argument to mysqld_safe when starting the server
+
+Starting mysqld:                                           [  OK  ]
+[ec2-user@ip-172-31-15-153 ~]$ sudo mysql_secure_installation
+
+
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MySQL
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MySQL to secure it, we'll need the current
+password for the root user.  If you've just installed MySQL, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MySQL
+root user without the proper authorisation.
+
+Set root password? [Y/n] Y
+New password: 
+Re-enter new password: 
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MySQL installation has an anonymous user, allowing anyone
+to log into MySQL without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] Y
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] Y
+ ... Success!
+
+By default, MySQL comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] Y
+ - Dropping test database...
+ERROR 1008 (HY000) at line 1: Can't drop database 'test'; database doesn't exist
+ ... Failed!  Not critical, keep moving...
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] Y
+ ... Success!
+
+
+
+
+All done!  If you've completed all of the above steps, your MySQL
+installation should now be secure.
+
+Thanks for using MySQL!
+
+
+Cleaning up...
+[ec2-user@ip-172-31-15-153 ~]$ sudo chkconfig mysqld on
+[ec2-user@ip-172-31-15-153 ~]$ ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+-bash: ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com: command not found
+[ec2-user@ip-172-31-15-153 ~]$ ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+-bash: ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com: command not found
+[ec2-user@ip-172-31-15-153 ~]$ echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+[ec2-user@ip-172-31-15-153 ~]$ packet_write_wait: Connection to 54.215.249.14 port 22: Broken pipe
+Xiaorans-MacBook-Pro:My_AWS Tom$  ssh -i "lxrpass_north_cal.pem" ec2-user@ec2-54-215-249-14.us-west-1.compute.amazonaws.com
+Last login: Sat Mar 11 05:39:40 2017 from 130.65.254.9
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2016.09-release-notes/
+[ec2-user@ip-172-31-15-153 ~]$ 
